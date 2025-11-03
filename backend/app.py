@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
-app = Flask(_name_)
+app = Flask(__name__)
 CORS(app)
 
 # Simple in-memory storage for demo
@@ -36,5 +36,5 @@ def set_budget():
     budgets[category] = amount
     return jsonify({"success": True})
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(debug=True)
